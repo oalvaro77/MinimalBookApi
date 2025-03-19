@@ -36,31 +36,35 @@ app.MapGet("/Book/{id}", async (DataContext context, int id) =>
      Results.NotFound("Sorry, Book not found"));
 
 
-app.MapPost("/Book", (Book book) =>
+app.MapPost("/Book", async (DataContext context, Book book) =>
 {
-    books.Add(book);
-    return book;
+
+    context.books.Add(book);
+    await context.SaveChangesAsync();
+    return Results.Ok(await context.books.ToListAsync());
 });
 
-app.MapPut("/Book/{id}", (Book updateBook, int id) =>
+app.MapPut("/Book/{id}", async(DataContext context, Book updateBook, int id) =>
 {
-    var book = books.Find(b => b.Id == id);
+    var book = await context.books.FindAsync(id);
     if (book is null)
         return Results.NotFound("The book was no found");
 
     book.Title = updateBook.Title;
     book.Author = updateBook.Author;
-    return Results.Ok(book);
+    await context.SaveChangesAsync();
+    return Results.Ok(await context.books.ToListAsync());
 });
 
 
-app.MapDelete("/Book/{id}", (int id) =>
+app.MapDelete("/Book/{id}", async (DataContext context, int id) =>
 {
-    var book = books.Find(b => b.Id == id);
+    var book =await context.books.FindAsync(id);
     if (book is null)
         return Results.NotFound("The Book was no found");
-    books.Remove(book);
-    return Results.Ok(book);
+    context.books.Remove(book);
+    await context.SaveChangesAsync();
+    return Results.Ok(await context.books.ToListAsync());
 });
 
 app.Run();
