@@ -1,10 +1,13 @@
+using Microsoft.EntityFrameworkCore;
+using MinimalBookApi;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-
+builder.Services.AddDbContext<DataContext>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -22,18 +25,16 @@ var books = new List<Book>
     new Book { Id = 2, Title = "The Martian", Author = "Andy Weir"}
 };
 
-app.MapGet("/Book", () =>
-{
-    return books;
-});
+app.MapGet("/Book", async (DataContext context) =>
 
-app.MapGet("/Book/{id}", (int id) =>
-{
-    var book = books.Find(b => b.Id == id);
-    if (book is null)
-        return Results.NotFound("The book was no found");
-    return Results.Ok(book);
-});
+     await context.books.ToListAsync());
+
+
+app.MapGet("/Book/{id}", async (DataContext context, int id) =>
+    await context.books.FindAsync(id) is Book book ?
+     Results.Ok(book) :
+     Results.NotFound("Sorry, Book not found"));
+
 
 app.MapPost("/Book", (Book book) =>
 {
@@ -64,7 +65,7 @@ app.MapDelete("/Book/{id}", (int id) =>
 
 app.Run();
 
-class Book
+public class Book
 {
     public int Id { get; set; }
     public required string Title { get; set; }

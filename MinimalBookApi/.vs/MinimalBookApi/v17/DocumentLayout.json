@@ -5,6 +5,14 @@
     {
       "AbsoluteMoniker": "D:0:0:{C92D871E-5104-449F-A3F7-F186F97875BB}|MinimalBookApi\\MinimalBookApi.csproj|c:\\users\\oalej\\code\\csharpprojects\\web api\\minimalbookapi\\minimalbookapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C92D871E-5104-449F-A3F7-F186F97875BB}|MinimalBookApi\\MinimalBookApi.csproj|solutionrelative:minimalbookapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\oalej\\Code\\CsharpProjects\\Web API\\MinimalBookApi\\MinimalBookApi\\Migrations\\20250319180852_Initial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:MinimalBookApi\\Migrations\\20250319180852_Initial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C92D871E-5104-449F-A3F7-F186F97875BB}|MinimalBookApi\\MinimalBookApi.csproj|c:\\users\\oalej\\code\\csharpprojects\\web api\\minimalbookapi\\minimalbookapi\\datacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C92D871E-5104-449F-A3F7-F186F97875BB}|MinimalBookApi\\MinimalBookApi.csproj|solutionrelative:minimalbookapi\\datacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,8 +22,34 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "20250319180852_Initial.cs",
+              "DocumentMoniker": "C:\\Users\\oalej\\Code\\CsharpProjects\\Web API\\MinimalBookApi\\MinimalBookApi\\Migrations\\20250319180852_Initial.cs",
+              "RelativeDocumentMoniker": "MinimalBookApi\\Migrations\\20250319180852_Initial.cs",
+              "ToolTip": "C:\\Users\\oalej\\Code\\CsharpProjects\\Web API\\MinimalBookApi\\MinimalBookApi\\Migrations\\20250319180852_Initial.cs",
+              "RelativeToolTip": "MinimalBookApi\\Migrations\\20250319180852_Initial.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-19T18:08:52.882Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DataContext.cs",
+              "DocumentMoniker": "C:\\Users\\oalej\\Code\\CsharpProjects\\Web API\\MinimalBookApi\\MinimalBookApi\\DataContext.cs",
+              "RelativeDocumentMoniker": "MinimalBookApi\\DataContext.cs",
+              "ToolTip": "C:\\Users\\oalej\\Code\\CsharpProjects\\Web API\\MinimalBookApi\\MinimalBookApi\\DataContext.cs",
+              "RelativeToolTip": "MinimalBookApi\\DataContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAABcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-19T17:52:51.012Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -24,7 +58,7 @@
               "RelativeDocumentMoniker": "MinimalBookApi\\Program.cs",
               "ToolTip": "C:\\Users\\oalej\\Code\\CsharpProjects\\Web API\\MinimalBookApi\\MinimalBookApi\\Program.cs",
               "RelativeToolTip": "MinimalBookApi\\Program.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAAAYwD8AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAAADIAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-19T15:56:32.054Z",
               "EditorCaption": ""
